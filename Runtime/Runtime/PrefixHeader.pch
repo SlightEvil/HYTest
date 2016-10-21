@@ -1,0 +1,22 @@
+//
+//  PrefixHeader.pch
+//  Runtime
+//
+//  Created by hy on 2016/10/17.
+//  Copyright © 2016年 hy. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+#define DEBug
+
+#ifdef DEBug
+#define DLog(format,...)   NSLog((@"[所在方法%s],[所在行%d]" format), __FUNCTION__ ,__LINE__,##__VA_ARGS__)
+#else
+#define DLog(...)
+#endif
+
+
+#endif /* PrefixHeader_pch */
